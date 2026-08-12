@@ -19,6 +19,32 @@
   margin-left: 245px;
 }
 
+/* The uploaded August 7 cover is already a complete hero composition. */
+.cover {
+  display: block !important;
+  position: relative;
+  width: 100%;
+  height: clamp(600px, 78vh, 760px);
+  min-height: 600px !important;
+  overflow: hidden;
+  background-color: #07182b;
+  background-image: url('ChatGPT%20Image%20Aug%207,%202026,%2009_20_08%20PM.png') !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: cover !important;
+}
+
+.cover::before,
+.cover::after {
+  display: none !important;
+}
+
+.cover-copy,
+.portrait-wrap,
+.cover-bottom {
+  display: none !important;
+}
+
 @media (max-width: 1100px) {
   .sidebar {
     width: 210px;
@@ -26,6 +52,11 @@
 
   .content {
     margin-left: 210px;
+  }
+
+  .cover {
+    height: clamp(560px, 72vh, 700px);
+    min-height: 560px !important;
   }
 }
 
@@ -45,5 +76,11 @@
   .content {
     margin-left: 0;
     width: 100% !important;
+  }
+
+  .cover {
+    height: 560px;
+    min-height: 560px !important;
+    background-position: center center !important;
   }
 }
