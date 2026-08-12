@@ -1,0 +1,49 @@
+/* Fixed left navigation shared by the portfolio pages */
+.sidebar {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 245px;
+  height: 100vh;
+  min-height: 100vh;
+  z-index: 1000;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.content {
+  width: auto !important;
+  min-width: 0;
+  margin-left: 245px;
+}
+
+@media (max-width: 1100px) {
+  .sidebar {
+    width: 210px;
+  }
+
+  .content {
+    margin-left: 210px;
+  }
+}
+
+@media (max-width: 760px) {
+  .sidebar {
+    position: relative !important;
+    top: auto;
+    left: auto;
+    bottom: auto;
+    width: 100%;
+    height: auto;
+    min-height: auto;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .content {
+    margin-left: 0;
+    width: 100% !important;
+  }
+}
